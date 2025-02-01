@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .logo {
+        max-width: 150px;
+        margin-bottom: 20px;
+      }
+      .columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .column {
+        flex: 1;
+        min-width: 30%;
+        padding: 10px;
+        text-align: left;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      input,
+      button {
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+      }
+      @media (max-width: 600px) {
+        .columns {
+          flex-direction: column;
+          align-items: center;
+        }
+        .column {
+          min-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.png" alt="Company Logo" class="logo" />
+      <h2>Care Plan</h2>
+      <ul>
+        <li>
+          A Nursing Care Plan in aged care is a structured, individualized
+          document that outlines a resident's healthcare needs, goals, and the
+          interventions required to achieve those goals.
+        </li>
+        <li>
+          It is developed collaboratively by nurses, allied health
+          professionals, and sometimes the resident and their family, ensuring a
+          person-centered approach to care.
+        </li>
+      </ul>
+      <div class="columns">
+        <div class="column">
+          <h3>My Goals</h3>
+          <ul>
+            <li>
+              I want to prevent pressure injuries by having regular
+              repositioning, using pressure-relieving devices, and having my
+              skin checked often.
+            </li>
+            <li>
+              I want to stay well-hydrated and have a nutritious diet to keep my
+              skin healthy and strong.
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>My Observations</h3>
+          <ul>
+            <li>
+              Observe and document the resident’s repositioning schedule,
+              ensuring they are turned or repositioned at appropriate intervals
+              (e.g., every 2 hours for bed-bound residents).
+            </li>
+            <li>
+              Assess and record skin integrity during routine checks, noting any
+              signs of redness, pressure areas, or skin breakdown, and escalate
+              concerns as needed.
+            </li>
+            <li>
+              Monitor and document the resident’s daily fluid intake, ensuring
+              they meet the recommended hydration levels (e.g., 1.5–2 liters per
+              day, unless contraindicated).
+            </li>
+            <li>
+              Observe for signs of dehydration or malnutrition, such as dry
+              skin, poor skin turgor, reduced appetite, or unintended weight
+              loss, and report any concerns to the healthcare team.
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Interventions</h3>
+          <ul>
+            <li>
+              Assist the resident with regular repositioning (e.g., every 2
+              hours in bed, every 1 hour in a chair) and document each change to
+              prevent prolonged pressure on any one area.
+            </li>
+            <li>
+              Provide and maintain pressure-relieving equipment such as
+              alternating air mattresses, pressure cushions, and heel protectors
+              to reduce the risk of skin breakdown.
+            </li>
+            <li>
+              Conduct daily skin assessments, focusing on pressure-prone areas
+              (e.g., sacrum, heels, elbows), and report any redness, breakdown,
+              or signs of infection to the healthcare team.
+            </li>
+            <li>
+              Regularly check for signs such as dry skin, poor skin turgor,
+              cracked lips, and unintended weight loss, and escalate concerns to
+              the healthcare team.
+            </li>
+            <li>
+              Offer high-protein or fortified drinks as prescribed to support
+              skin health and overall well-being, particularly for residents
+              with reduced appetite.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h3>Lets check your Understanding of Nursing CarePlan</h3>
+      <h4>Clinical Scenario</h4>
+      <p>
+        ### **Scenario: Resident Explaining Goals to the Nurse** **Resident:**
+        *"Nurse, I want to talk about my care plan. There are two things that
+        are really important to me."* **Nurse:** *"Of course! I’m here to
+        listen. What would you like to discuss?"* **Resident:** *"First, I want
+        to make sure I don’t get any pressure injuries. I know staying in bed
+        for too long can cause sores, so I want to be repositioned regularly.
+        Also, I’ve heard that using special cushions or mattresses can help. Can
+        you make sure my skin is checked often to catch any early signs of
+        problems?"* **Nurse:** *"That’s a great goal! I’ll ensure we follow a
+        regular repositioning schedule and use pressure-relieving equipment to
+        keep you comfortable. I’ll also check your skin daily and report any
+        concerns immediately."* **Resident:** *"Thank you! The other thing I’m
+        worried about is staying hydrated and eating well. I don’t always feel
+        thirsty, but I know my skin stays healthier when I drink enough water.
+        And I want to make sure I’m getting the right foods to keep my skin
+        strong."* **Nurse:** *"I understand. I’ll remind you to drink water
+        throughout the day and track your fluid intake. I’ll also work with the
+        dietitian to make sure your meals are packed with the right nutrients to
+        support your skin health. If needed, we can add some supplements too."*
+        **Resident:** *"That sounds good! I just want to stay as healthy as
+        possible and avoid any unnecessary problems."* **Nurse:** *"Absolutely,
+        and I’ll be here to support you every step of the way!"*
+      </p>
+      <h4>Just write one goal and see if you got it right.</h4>
+      <input type="text" id="userAnswer" placeholder="Type your answer here" />
+      <button onclick="checkAnswer()">Check Answer</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      function checkAnswer() {
+        const userInput = document
+          .getElementById("userAnswer")
+          .value.toLowerCase();
+        const keywords = [
+          "the resident",
+          "wish",
+          "want to",
+          "maintain",
+          "independent",
+          "to be",
+        ];
+        let matchCount = 0;
+        keywords.forEach((word) => {
+          if (userInput.includes(word)) {
+            matchCount++;
+          }
+        });
+        const resultText = document.getElementById("result");
+        if (matchCount >= 3) {
+          resultText.textContent = "Well done!";
+          resultText.style.color = "green";
+        } else {
+          resultText.textContent = "Try again.";
+          resultText.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
